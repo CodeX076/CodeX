@@ -10,7 +10,7 @@
 </head>
 <body>
   <header>
-    <h1>               Welcome, Citizen 👋</h1>
+    <h1>Digital Civic Platform for Policy Participation and Public Spending Transparency</h1>
     <div class="theme-toggle">
       <input type="checkbox" id="darkModeToggle" />
       <label for="darkModeToggle">🌙</label>
@@ -90,5 +90,19 @@
       );
     });
   </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const logoutBtn = document.querySelector('.logout-btn');
+  
+      if (logoutBtn) {
+        logoutBtn.addEventListener('click', () => {
+          window.location.href = 'login.html'; // Redirect to login
+        });
+      }
+    });
+  </script>
+  </body>
+  </html>
+  
 </body>
 </html>

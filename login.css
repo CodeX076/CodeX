@@ -32,6 +32,14 @@
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
     animation: fadeIn 1s ease;
   }
+  #particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: -1;
+  }
   
   form {
     display: flex;

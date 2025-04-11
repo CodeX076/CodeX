@@ -64,3 +64,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+document.addEventListener("DOMContentLoaded", () => {
+    const logoutBtn = document.querySelector('.logout-btn');
+  
+    if (logoutBtn) {
+      logoutBtn.addEventListener('click', () => {
+        window.location.href = 'login.html'; // Redirect to login
+      });
+    }
+  });
+  
