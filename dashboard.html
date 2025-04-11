@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="dashboard.js"></script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dashboard | Civic Connect</title>
@@ -8,7 +10,7 @@
 </head>
 <body>
   <header>
-    <h1>Welcome, Citizen 👋</h1>
+    <h1>               Welcome, Citizen 👋</h1>
     <div class="theme-toggle">
       <input type="checkbox" id="darkModeToggle" />
       <label for="darkModeToggle">🌙</label>
@@ -16,42 +18,67 @@
   </header>
 
   <main>
-    <section class="card">
-      <h2>Policy Voting</h2>
-      <ul class="policy-list">
-        <li>
-          <span>Should plastic bags be banned?</span>
-          <button>Vote</button>
-        </li>
-        <li>
-          <span>Increase budget for education?</span>
-          <button>Vote</button>
-        </li>
-      </ul>
-    </section>
+    
+      <!-- Policy Voting -->
+      <section class="card">
+        <h2>Policy Voting</h2>
+        <ul class="policy-list">
+          <li>
+            <span>Should plastic bags be banned?</span>
+            <div>
+              <span id="voteCount1">0</span>
+              <button onclick="vote(1)">Vote</button>
+            </div>
+          </li>
+          <li>
+            <span>Increase budget for education?</span>
+            <div>
+              <span id="voteCount2">0</span>
+              <button onclick="vote(2)">Vote</button>
+            </div>
+          </li>
+        </ul>
+      </section>
+    
+      <!-- Fund Visualization Graph -->
+      <section class="card">
+        <h2>Fund Visualization</h2>
+        <canvas id="fundChart" width="400" height="200"></canvas>
 
-    <section class="card">
-      <h2>Fund Visualization</h2>
-      <div class="chart-placeholder">[ Chart will go here ]</div>
-    </section>
-
-    <section class="card">
-      <h2>Your Reputation Score</h2>
-      <div class="score">⭐ 83 / 100</div>
-    </section>
-
-    <section class="card">
-      <h2>Recent Activity</h2>
-      <ul class="activity-feed">
-        <li>Voted on "Clean Water Act" — +5 points</li>
-        <li>Commented on "Public Health Policy"</li>
-        <li>Joined forum: "Smart City Planning"</li>
-      </ul>
-    </section>
-
-    <div class="logout-container">
-      <button class="logout-btn">Logout</button>
-    </div>
+      </section>
+    
+      <!-- Ongoing Government Schemes -->
+      <section class="card">
+        <h2>Ongoing Government Schemes</h2>
+        <ul class="policy-list">
+          <li>PM Awas Yojana</li>
+          <li>Startup India</li>
+          <li>Digital India Mission</li>
+        </ul>
+      </section>
+    
+      <!-- Reputation Score -->
+      <section class="card">
+        <h2>Your Reputation Score</h2>
+        <div class="score">⭐ 83 / 100</div>
+      </section>
+    
+      <!-- Recent Activity -->
+      <section class="card">
+        <h2>Recent Activity</h2>
+        <ul class="activity-feed">
+          <li>Voted on "Clean Water Act" — +5 points</li>
+          <li>Commented on "Public Health Policy"</li>
+          <li>Joined forum: "Smart City Planning"</li>
+        </ul>
+      </section>
+    
+      <!-- Logout -->
+      <div class="logout-container">
+        <button class="logout-btn">Logout</button>
+      </div>
+  
+    
   </main>
 
   <script>

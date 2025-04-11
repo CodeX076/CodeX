@@ -1,5 +1,5 @@
 :root {
-    --bg-color: #f4f4f4;
+    --bg-color: #660606d0;
     --text-color: #222;
     --card-bg: #fff;
     --accent: #4a90e2;
@@ -65,7 +65,7 @@
   }
   
   .chart-placeholder {
-    background-color: #ccc;
+    background-color: #cccccce2;
     height: 200px;
     border-radius: 8px;
     display: flex;
@@ -88,7 +88,7 @@
   .logout-btn {
     margin-top: 1rem;
     background-color: #e74c3c;
-    color: #fff;
+    color: #ffffffa1;
     border: none;
     padding: 0.6rem 1.2rem;
     font-size: 1rem;
