@@ -2,19 +2,36 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Indian Government</title>
+  <!-- Link to CSS -->
+  <link rel="stylesheet" href="login.css">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
+  <div class="toggle-wrapper">
+    <label class="switch">
+      <input type="checkbox" id="darkToggle">
+      <span class="slider"></span>
+    </label>
+  </div>
+
+  <div class="container">
     <h1>Login</h1>
-  </header>
-  <form id="loginForm">
-    <input type="text" id="username" placeholder="Username" required>
-    <input type="password" id="password" placeholder="Password" required>
-    <button type="submit">Login</button>
-  </form>
-  <script src="js/main.js"></script>
+    <form onsubmit="redirectToDashboard(event)">
+      <input type="text" placeholder="User Name" required>
+      <input type="password" placeholder="Password" required>
+      <button type="submit">Login</button>
+    </form>
+  </div>
+
+  <!-- Link to JS -->
+  <script src="login.js"></script>
+  <script>
+    function redirectToDashboard(event) {
+      event.preventDefault(); // Prevent actual form submission
+      window.location.href = "dashboard.html";
+    }
+  </script>
 </body>
 </html>
